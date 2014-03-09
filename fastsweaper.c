@@ -261,8 +261,9 @@ int solve(void){
 				numtest++;
 				int nos;
 				int tx = gx-1;
+				int ty = gy-1;
 				if(y>0){
-					nos = ((x-1) + (y-1)*gx);
+					nos = ((x-1) + ((y-1)*gx));
 					if(shown[nos] == 11) shown[nos] = 12;
 					nos++;
 					if(shown[nos] == 11) shown[nos] = 12;
@@ -271,14 +272,14 @@ int solve(void){
 						if(shown[nos] == 11) shown[nos] = 12;
 					}
 				}
-				nos = (x-1 + y*gx);
+				nos = ((x-1) + (y*gx));
 				if(shown[nos] == 11) shown[nos] = 12;
 				if(x<tx){
 					nos+=2;
 					if(shown[nos] == 11) shown[nos] = 12;
 				}
-				if(y<gy-1){
-					nos = ((x-1) + (y+1)*gx);
+				if(y<ty){
+					nos = ((x-1) + ((y+1)*gx));
 					if(shown[nos] == 11) shown[nos] = 12;
 					nos++;
 					if(shown[nos] == 11) shown[nos] = 12;
