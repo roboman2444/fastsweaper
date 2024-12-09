@@ -322,7 +322,7 @@ int main(int argc, char * argv[]){
 	printGridC(cursorx, cursory, shown);
 
 
-	char c;
+	char c=0;
 	while(c != 'x' && (c=mygetch()) != 'x'){
 		switch(c){
 			case 'w': moveCursor('w'); break;
